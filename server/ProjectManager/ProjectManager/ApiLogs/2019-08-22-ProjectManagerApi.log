@@ -1,0 +1,48 @@
+2019-08-22 17:11:25.4026|INFO|ProjectManager.Utils.LoggingUtility|Operation Result Format: JSON
+Request ID: e37a36e4-bfa4-47fb-8edd-cbd37cc21eaa
+Method: GET
+URL: http://localhost:8086/api/user
+Controller : ProjectManager.Controllers.UserController
+Action : GetUser
+Action Parameters : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass14_0
+
+2019-08-22 17:11:25.4026|INFO|ProjectManager.Utils.LoggingUtility|Operation Result Format: JSON
+Request ID: c1c3baf2-cf8e-4b87-b1bd-7f4e274466ff
+Method: GET
+URL: http://localhost:8086/api/project
+Controller : ProjectManager.Controllers.ProjectController
+Action : RetrieveProjects
+Action Parameters : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass14_0
+
+2019-08-22 17:11:25.4146|INFO|ProjectManager.Utils.LoggingUtility|Operation Result Format: JSON
+Request ID: c1c3baf2-cf8e-4b87-b1bd-7f4e274466ff
+Method: GET
+URL: http://localhost:8086/api/project
+Controller : ProjectManager.Controllers.ProjectController
+Action : RetrieveProjects
+Action Parameters : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass14_0
+
+2019-08-22 17:11:25.4026|INFO|ProjectManager.Utils.LoggingUtility|Operation Result Format: JSON
+Request ID: e37a36e4-bfa4-47fb-8edd-cbd37cc21eaa
+Method: GET
+URL: http://localhost:8086/api/user
+Controller : ProjectManager.Controllers.UserController
+Action : GetUser
+Action Parameters : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass14_0
+
+2019-08-22 17:11:37.4824|INFO|ProjectManager.Utils.LoggingUtility|Operation Result Format: JSON
+Request ID: bf02e183-573e-4926-a470-e0dd7c5ce6ef
+Method: GET
+URL: http://localhost:8086/api/user
+Controller : ProjectManager.Controllers.UserController
+Action : GetUser
+Action Parameters : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass14_0
+
+2019-08-22 17:11:37.4824|INFO|ProjectManager.Utils.LoggingUtility|Operation Result Format: JSON
+Request ID: bf02e183-573e-4926-a470-e0dd7c5ce6ef
+Method: GET
+URL: http://localhost:8086/api/user
+Controller : ProjectManager.Controllers.UserController
+Action : GetUser
+Action Parameters : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass14_0
+
