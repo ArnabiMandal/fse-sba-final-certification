@@ -1,27 +1,69 @@
-import { TestBed, async } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import { AppComponent } from "./app.component";
+
+import { ComponentFixture, TestBed, async } from "@angular/core/testing";
+
+import { Routes, RouterModule } from "@angular/router";
+
+import { UserComponent } from "./user/user.component";
+
+import { Ng5SliderModule } from "ng5-slider";
+
+import { BsDatepickerModule } from "ngx-bootstrap";
+
+import { FormsModule } from "@angular/forms";
+
+import { ToastrModule } from "ngx-toastr";
+
+import { ViewTaskComponent } from "./view-task/view-task.component";
+
+import { ProjectComponent } from "./project/project.component";
+
+import { FilteruserPipe } from "./pipes/filteruser.pipe";
+
+import { AddTaskComponent } from "./add-task/add-task.component";
+
 describe('AppComponent', () => {
+  let component: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
+
   beforeEach(async(() => {
+    const routes: Routes = [
+      { path: '', redirectTo: 'user', pathMatch: 'full' },
+      { path: 'user', component: UserComponent }
+    ];
     TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
+      imports: [
+        RouterModule.forRoot(routes, { useHash: true }),
+        Ng5SliderModule,
+        BsDatepickerModule.forRoot(),
+        FormsModule,
+        ToastrModule.forRoot({
+          timeOut: 3000,
+          positionClass: 'toast-bottom-right',
+          preventDuplicates: true
+        })
       ],
-    }).compileComponents();
+      declarations: [
+        AppComponent,
+        ViewTaskComponent,
+        UserComponent,
+        ProjectComponent,
+        FilteruserPipe,
+        AddTaskComponent
+      ],
+    }).compileComponents().then(() => {
+      fixture = TestBed.createComponent(AppComponent);
+      component = fixture.debugElement.componentInstance;
+    });
   }));
-  it('should create the app', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
-  }));
-  it(`should have as title 'client'`, async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('client');
-  }));
-  it('should render title in a h1 tag', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
+
+  it('should create the Application', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it(`should render the heading as Project Management`, () => {
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to client!');
-  }));
+    const ele = fixture.debugElement.nativeElement;
+    expect(ele.querySelector('.navbar-brand').textContent).toContain('Project Management');
+  });
 });
